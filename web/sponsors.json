@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "currency": "₹",
+  "placements": {
+    "home": {
+      "label": "Home screen",
+      "blurb": "Seen every time someone opens Tend",
+      "slots": 4,
+      "price": 2999
+    },
+    "reading": {
+      "label": "Reading",
+      "blurb": "Readers tracking books and pages",
+      "slots": 2,
+      "price": 1499
+    },
+    "finance": {
+      "label": "Finance",
+      "blurb": "People budgeting and saving",
+      "slots": 2,
+      "price": 1499
+    },
+    "gym": {
+      "label": "Fitness",
+      "blurb": "People logging workouts",
+      "slots": 2,
+      "price": 1499
+    },
+    "habits": {
+      "label": "Habits",
+      "blurb": "People building daily routines",
+      "slots": 2,
+      "price": 1499
+    },
+    "export": {
+      "label": "After sharing",
+      "blurb": "Shown when someone saves a share card",
+      "slots": 2,
+      "price": 999
+    }
+  },
+  "booking": {
+    "email": "",
+    "whatsapp": "",
+    "paymentLinks": {
+      "home": "",
+      "reading": "",
+      "finance": "",
+      "gym": "",
+      "habits": "",
+      "export": ""
+    },
+    "supportLink": ""
+  },
+  "sponsors": [],
+  "_example_sponsor": {
+    "placement": "home",
+    "slot": 1,
+    "name": "Acme",
+    "tagline": "Budgeting made simple",
+    "url": "acme.com",
+    "logo": "logos/acme.png",
+    "until": "2026-12-31"
+  }
+}

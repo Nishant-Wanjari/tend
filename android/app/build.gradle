@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'app.tend.tracker'
+    compileSdk 35
+    buildToolsVersion '34.0.0'
+
+    defaultConfig {
+        applicationId 'app.tend.tracker'
+        minSdk 29
+        targetSdk 34
+        versionCode((System.getenv('GITHUB_RUN_NUMBER') ?: '1') as Integer)
+        versionName "1.0.${System.getenv('GITHUB_RUN_NUMBER') ?: '0'}"
+    }
+
+    signingConfigs {
+        // One fixed key, so each new APK installs over the old one and keeps your data.
+        // Before publishing on the Play Store, replace it with a private key kept out of the repo.
+        tend {
+            storeFile file('tend-release.keystore')
+            storePassword 'tendtend'
+            keyAlias 'tend'
+            keyPassword 'tendtend'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.tend
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.tend
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.13.1'
+}
